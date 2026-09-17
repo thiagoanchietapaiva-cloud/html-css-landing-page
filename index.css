@@ -87,49 +87,52 @@ header {
 
 }
 
-#cafes { 
+#cafes {
     background-image: url('/assets/bg\ cafes.png');
     background-size: contain;
     background-repeat: no-repeat;
-    
-        & .textos{
-        color:#3c0e0e;
+
+    & .textos {
+        color: #3c0e0e;
         display: flex;
         align-items: center;
         flex-direction: column;
         text-align: center;
 
-        & h2{
+        & h2 {
             font-size: 40px;
             font-weight: 600;
         }
-        & .detalhe{
+
+        & .detalhe {
             width: 65px;
             height: 1px;
             background-color: #3c0e0e;
             margin-bottom: 16px;
         }
-        & p{
+
+        & p {
             width: 540px;
             margin-bottom: 30px;
 
         }
-        & a{
+
+        & a {
             color: #3c0e0e;
             font-weight: bold;
         }
 
     }
 
-    & .grade{
+    & .grade {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 70px;
         padding: 0 60px;
         margin-top: 60px;
 
-        & div{
-            
+        & div {
+
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -138,29 +141,31 @@ header {
             padding: 25px 30px;
             text-align: center;
 
-            &.cafe1{
+            &.cafe1 {
                 background: linear-gradient(202.65deg, #F6C7C5 4.72%, #C27D7A 102.83%);
             }
 
-            &.cafe2{
+            &.cafe2 {
                 background: linear-gradient(202.65deg, rgba(250, 250, 250, 0.95) 4.72%, rgba(84, 21, 17, 0.58) 102.83%);
 
             }
-            
-            &.cafe3{
+
+            &.cafe3 {
                 background: linear-gradient(202.65deg, rgba(10, 9, 9, 0.95) 4.72%, rgba(84, 21, 17, 0.95) 102.83%);
             }
 
-            & h3{
+            & h3 {
                 font-size: 20px;
                 margin-bottom: 10px;
-                
+
             }
-            & h2{
+
+            & h2 {
                 font-size: 32px;
                 margin-bottom: 20px;
             }
-            & a{
+
+            & a {
                 display: block;
                 background-color: #fff8f8;
                 line-height: 46px;
@@ -173,5 +178,186 @@ header {
                 box-shadow: 0 8px 7px #00000096;
             }
         }
-    }    
-}    
+    }
+}
+
+#croissant {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1170px;
+    margin: 0 auto;
+    padding: 100px 0;
+    color: #3c0e0e;
+
+    & .texto {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        max-width: 500px;
+
+        & .preco {
+            background: #ffffff;
+            color: #f9c4c4;
+            display: inline;
+            padding: 0 15px;
+            border-radius: 20px;
+            font-weight: bold;
+            line-height: 40px;
+        }
+
+        & h2 {
+            font-size: 80px;
+            font-weight: bold;
+            line-height: 104%;
+        }
+
+        & .detalhe2 {
+            width: 50px;
+            height: 1px;
+            margin-left: 5px;
+            margin-top: -15px;
+            background-color: #3c0e0e;
+        }
+
+        & h3 {
+            color: #3c0e0e;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        & a {
+            margin-top: 20px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #3c0e0e;
+        }
+    }
+
+    & .imagem {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        & img {
+            width: 500px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+}
+
+#delivery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(202.65deg, rgba(243, 199, 196, 0.95)4.72%, rgba(84, 21, 17, 0.95) 81.94%);
+    color: #ffffff;
+    width: 1115px;
+    height: 370px;
+    margin: 0 auto;
+    padding-right: 5px;
+    border-radius: 48px;
+
+    & img {
+        margin-top: -100px;
+    }
+
+    & .texto {
+
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        max-width: 500px;
+
+        & h2 {
+            font-size: 80px;
+            font-weight: 30px;
+            line-height: 104%;
+        }
+
+
+        & .btn {
+            display: inline-block;
+            background: #ffffff;
+            color: #3c0e0e;
+            padding: 12px 32px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 8px 7px #00000096;
+        }
+    }
+}
+
+#sobre {
+    background-image: url("./assets/bg-cafes-2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 100px;
+    width: 1173px;
+    max-width: 100%;
+    min-height: 600px;
+    margin: 60px auto;
+    padding: 100px 60px;
+    color: #3c0e0e;
+    overflow: hidden;
+
+    & .texto-principal {
+        flex: 1;
+        max-width: 500px;
+
+        & h2 {
+            font-size: 32px;
+            line-height: 110%;
+        }
+    }
+
+    & .texto-secundario {
+        flex: 1;
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+#localizaçao {
+    width: 1115px;
+    margin: 0 auto;
+    border-radius: 48px;
+    color: #ffffff;
+    display: flex;
+    background: linear-gradient(202.65deg, rgba(84, 21, 17, 0.66) 4.72%, #F3C7C4 102.83%);
+    padding-left: 40px;
+    position:relative;
+
+    & h2 {
+        font-size: 80px;
+        line-height: 84px;
+       
+    }
+
+    & .detalhe3{
+        width: 50px;
+        height: 1px;
+        background-color: #ffffff;
+    }
+
+    & img{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+
+
+    }
+}
