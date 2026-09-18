@@ -7,6 +7,7 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
     list-style: none;
+    
 
 }
 
@@ -128,7 +129,6 @@ header {
         grid-template-columns: repeat(3, 1fr);
         gap: 70px;
         padding: 0 60px;
-        margin-top: 60px;
 
         & div {
 
@@ -297,22 +297,22 @@ header {
 #sobre {
     background-image: url("./assets/bg-cafes-2.png");
     background-size: cover;
-    background-position: center;
     background-repeat: no-repeat;
+    background-size: 100% 100%;
 
     display: flex;
     justify-content: center;
     gap: 100px;
-    width: 100vw;
-    max-width: 1173px;
     min-height: 600px;
-    margin: 60px auto;
-    padding: 100px 60px;
     color: #3c0e0e;
+    padding-top: 50px;
+    margin-left: calc(50% - 50vw);
+    overflow: visible;
 
     & .texto-principal {
         flex: 1;
         max-width: 500px;
+        padding-top: 70px;
 
         & h2 {
             font-size: 32px;
@@ -325,7 +325,8 @@ header {
         max-width: 500px;
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 30px;
+        padding-top: 160px;
     }
 }
 
