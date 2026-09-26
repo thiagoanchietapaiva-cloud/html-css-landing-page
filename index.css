@@ -12,7 +12,7 @@
 }
 
 body {
-    background-color: #fff8f8;
+    background-color: #fcd5fa78;
 }
 
 header {
@@ -25,7 +25,8 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-
+    z-index: 10;
+    
 
     & div {
         display: flex;
@@ -82,8 +83,6 @@ header {
         width: 350px;
     }
 
-    /* & img {
-        width: 500px;} */
 
 }
 
@@ -463,4 +462,84 @@ footer {
         }
     }
 
+}
+
+/* =========================================================
+   RESPONSIVIDADE 
+   ========================================================= */
+img { max-width: 100%; height: auto; }
+
+/* Evita scroll horizontal sem cortar imagem */
+html, body { max-width: 100%; overflow-x: clip; }
+#top, #sobre, #localizacao { overflow: visible; }
+#top div:last-child img { object-fit: contain; }
+
+/* Backgrounds nunca cortados */
+#cafes { background-size: contain !important; background-position: top center !important; }
+#sobre { background-size: contain !important; background-position: top center !important; background-repeat: no-repeat !important; }
+
+@media (max-width: 1440px) {
+  header { padding-left: 5% !important; padding-right: 5% !important; }
+  #top { padding: 0 5% !important; }
+}
+
+@media (max-width: 1100px) {
+  header { padding-left: 3% !important; padding-right: 3% !important; }
+  header div a { margin-left: 18px !important; font-size: 17px !important; }
+  #top div:first-child h2 { font-size: 64px !important; line-height: 68px !important; }
+  #cafes .grade { gap: 30px !important; padding: 0 20px !important; grid-template-columns: repeat(2, 1fr) !important; }
+  #croissant { width: 92% !important; }
+  #delivery { width: 92% !important; height: auto !important; min-height: 340px; }
+  #localizacao { width: 92% !important; }
+  footer { width: 92% !important; }
+}
+
+@media (max-width: 768px) {
+  header { 
+    padding-left: 4% !important; 
+    padding-right: 4% !important; 
+    flex-wrap: wrap;
+    position: relative !important;
+  }
+  header div { flex-wrap: wrap; }
+  header div a { font-size: 16px !important; margin-left: 16px !important; }
+
+  #top {
+    flex-direction: column !important;
+    padding: 30px 5% 40px !important;
+    text-align: left;
+  }
+  #top div:first-child { padding-top: 20px !important; padding-left: 0 !important; max-width: 100% !important; }
+  #top div:first-child h2 { font-size: 56px !important; line-height: 56px !important; }
+  #top p { width: 100% !important; max-width: 100% !important; }
+  #top div:last-child { width: 100% !important; justify-content: center !important; margin-top: 20px; }
+  #top div:last-child img { width: 100% !important; max-width: 100% !important; }
+
+  #cafes .grade { grid-template-columns: 1fr !important; gap: 24px !important; padding: 0 !important; }
+  #cafes .textos p { width: 100% !important; max-width: 100% !important; padding: 0 5%; }
+
+  #croissant { width: 92% !important; flex-direction: column-reverse !important; padding: 40px 0 !important; text-align: center; }
+  #croissant .texto { align-items: center !important; max-width: 100% !important; }
+  #croissant .imagem { justify-content: center !important; width: 100%; }
+
+  #delivery { flex-direction: column !important; height: auto !important; padding: 20px !important; text-align: center; }
+  #delivery img { margin-top: 0 !important; width: 100% !important; max-width: 340px !important; }
+  #delivery .texto h2 { font-size: 38px !important; }
+  #delivery .texto { max-width: 100% !important; }
+
+  #sobre { flex-direction: column !important; gap: 30px !important; min-height: auto !important; padding: 50px 5% !important; margin-left: 0 !important; }
+  #sobre .texto-principal, #sobre .texto-secundario { max-width: 100% !important; padding-top: 0 !important; }
+
+  #localizacao { flex-direction: column !important; width: 92% !important; padding-left: 0 !important; overflow: hidden !important; }
+  #localizacao > div:first-child { padding: 30px 24px 0 !important; max-width: 100% !important; }
+  #localizacao img { position: relative !important; top: auto !important; left: auto !important; transform: none !important; width: 200px !important; margin: 20px auto !important; }
+  #localizacao > div:nth-of-type(2) { width: 100% !important; border-radius: 0 0 48px 48px !important; padding: 24px !important; }
+
+  footer { width: 92% !important; flex-direction: column !important; gap: 30px !important; margin: 50px auto !important; padding-top: 40px !important; }
+}
+
+@media (max-width: 480px) {
+  #top div:first-child h2 { font-size: 44px !important; line-height: 44px !important; }
+  header div a { font-size: 14px !important; margin-left: 10px !important; }
+  #cafes .grade div { border-radius: 32px !important; }
 }
