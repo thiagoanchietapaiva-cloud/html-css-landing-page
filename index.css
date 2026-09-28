@@ -11,8 +11,10 @@ header div:first-child img{width:42px;height:42px;object-fit:contain}
 header div:first-child a{margin-left:18px;font-size:17px;color:#3c0e0e;font-weight:500;border-bottom:3px solid transparent;transition:.2s;padding-bottom:2px}
 header div:first-child a:hover{border-bottom-color:#3c0e0e}
 header div:last-child{gap:10px}
-header div:last-child a{margin-left:10px;font-size:17px;color:#3c0e0e;font-weight:500}
-header div:last-child a.btn{background-color:#3c0e0e;color:#fff;padding:8px 26px;border-radius:38px;transition:.2s}
+header div:last-child a{margin-left:10px;font-size:17px;color:#3c0e0e;font-weight:500;border-bottom:3px solid transparent;transition:.2s;padding-bottom:2px}
+header div:last-child a:hover{border-bottom-color:#3c0e0e}
+header div:last-child a.btn{background-color:#3c0e0e;color:#fff;padding:8px 26px;border-radius:38px;transition:.2s;border-bottom:3px solid transparent}
+header div:last-child a.btn:hover{background:#5a1a1a;border-bottom-color:transparent}
 .menu-toggle{display:none;background:#3c0e0e;border:none;width:44px;height:44px;border-radius:50%;cursor:pointer;align-items:center;justify-content:center;color:#fff;font-size:26px;z-index:101}
 #top{padding:120px 5% 60px;display:flex;justify-content:space-between;align-items:center;gap:40px;max-width:1400px;margin:0 auto;min-height:75vh}
 #top div:first-child{flex:1;color:#3c0e0e;max-width:520px}
@@ -56,14 +58,14 @@ header div:last-child a.btn{background-color:#3c0e0e;color:#fff;padding:8px 26px
 #sobre .texto-principal{flex:1;max-width:500px;padding-top:40px}
 #sobre .texto-principal h2{font-size:clamp(24px,3.5vw,32px);line-height:1.2}
 #sobre .texto-secundario{flex:1;max-width:500px;display:flex;flex-direction:column;gap:20px;padding-top:40px}
-#localizacao{width:92%;max-width:1115px;margin:60px auto;border-radius:40px;color:#fff;display:flex;background:linear-gradient(202.65deg,rgba(84,21,17,0.66) 4.72%,#F3C7C4 102.83%);position:relative;justify-content:space-between;overflow:hidden;min-height:420px}
+#localizacao{width:92%;max-width:1115px;margin:60px auto;border-radius:40px;color:#fff;display:flex;background:linear-gradient(202.65deg,rgba(84,21,17,0.66) 4.72%,#F3C7C4 102.83%);position:relative;justify-content:space-between;overflow:visible;min-height:420px}
 #localizacao>div:first-child{padding:50px 30px 40px 40px;flex:1;max-width:360px;z-index:2}
 #localizacao h2{font-size:clamp(36px,5vw,70px);line-height:.95;margin-top:10px}
 #localizacao .detalhe,#localizacao .detalhe3{width:50px;height:1px;background-color:#fff;margin:18px 0}
 #localizacao h6{font-size:18px;font-weight:500;margin:16px 0 6px}
 #localizacao p{width:100%;max-width:300px;margin-bottom:20px;line-height:1.5}
 #localizacao a{font-weight:bold;color:#3c0e0e;display:inline-block;margin-top:10px}
-#localizacao>img{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;z-index:1;pointer-events:none}
+#localizacao>img{position:absolute;top:50%;left:50%;transform:translate(-50%,-48%);width:420px;z-index:3;pointer-events:none;filter:drop-shadow(0 16px 24px rgba(0,0,0,.25))}
 #localizacao>div:nth-of-type(2){border-radius:0 40px 40px 0;width:360px;padding:30px;background:linear-gradient(202.65deg,#8F423D 4.72%,#FFFFFF 102.83%);display:flex;flex-direction:column;justify-content:center;z-index:2}
 #localizacao>div:nth-of-type(2) h2{font-size:32px}
 #localizacao>div:nth-of-type(2) .detalhe3{width:100%;margin-bottom:30px}
@@ -72,9 +74,11 @@ header div:last-child a.btn{background-color:#3c0e0e;color:#fff;padding:8px 26px
 footer{width:92%;max-width:1115px;display:flex;justify-content:space-between;margin:80px auto 40px;padding-top:60px;gap:40px;flex-wrap:wrap;border-top:1px solid #f0dada}
 footer h6{font-size:20px;font-weight:600;margin-bottom:16px;color:#3c0e0e}
 footer ul{display:flex;gap:10px;margin-top:16px}
-footer ul a{width:38px;height:38px;background:#3c0e0e;border-radius:50%;display:grid;place-items:center}
+footer ul a{width:38px;height:38px;background:#3c0e0e;border-radius:50%;display:grid;place-items:center;transition:.2s}
+footer ul a:hover{transform:translateY(-3px);background:#5a1a1a}
 footer ul box-icon{fill:#fff !important}
-footer a{color:#000;transition:.2s;line-height:28px;font-size:14px}
+footer a{color:#000;transition:.2s;line-height:28px;font-size:14px;display:block}
+footer ol a:hover{color:#C27D7A;padding-left:10px}
 footer div:first-child p{max-width:300px;margin-bottom:12px;font-size:14px;line-height:1.6}
 @media(max-width:1024px){header{padding:14px 4%}header div:first-child a{margin-left:14px;font-size:15px}#top{padding-top:100px}#cafes .grade{grid-template-columns:repeat(2,1fr)}#localizacao>img{width:220px;opacity:.8}}
 @media(max-width:768px){
@@ -108,12 +112,10 @@ footer{flex-direction:column;gap:28px;margin-top:50px;padding-top:40px}
 .menu-overlay{display:none;position:fixed;inset:0;background:#00000040;z-index:99}
 .menu-overlay.show{display:block}
 
-/* =========================================================
-   RESPONSIVIDADE - MANTÉM DESKTOP ORIGINAL + MOBILE COM HAMBURGUER
-   ========================================================= */
+
 img { max-width: 100%; height: auto; display: block; }
 
-/* Header - mantém seu hover original */
+
 header { transition: all .3s ease; }
 header .logo-area { display: flex; align-items: center; gap: 14px; }
 header .logo-area img { width: 46px; height: 46px; object-fit: contain; }
@@ -129,10 +131,11 @@ header .nav-desktop a {
 }
 header .nav-desktop a:hover { border-bottom: 5px solid #3c0e0e; }
 header .actions-desktop { display: flex; align-items: center; }
-header .actions-desktop a { margin-left: 24px; font-size: 18px; color: #3c0e0e; font-weight: 500; }
-header .actions-desktop a.btn { background: #3c0e0e; color: #fff; padding: 7px 26px; border-radius: 38px; }
+header .actions-desktop a { margin-left: 24px; font-size: 18px; color: #3c0e0e; font-weight: 500; border-bottom: 5px solid transparent; transition-duration: 200ms; padding-bottom:2px; }
+header .actions-desktop a:hover { border-bottom: 5px solid #3c0e0e; }
+header .actions-desktop a.btn { background: #3c0e0e; color: #fff; padding: 7px 26px; border-radius: 38px; border-bottom: 5px solid transparent; }
+header .actions-desktop a.btn:hover { background:#5a1a1a; border-bottom-color:transparent; }
 
-/* Botão hambúrguer - 3 traços */
 .menu-toggle {
     display: none;
     width: 44px;
@@ -202,14 +205,12 @@ header .actions-desktop a.btn { background: #3c0e0e; color: #fff; padding: 7px 2
 }
 .menu-overlay.show { display: block; }
 
-/* Evita corte */
 html, body { max-width: 100%; overflow-x: clip; }
 #top, #sobre, #localizacao { overflow: visible; }
 #top img { object-fit: contain; }
 #cafes { background-size: contain !important; background-position: top center !important; }
 #sobre { background-size: contain !important; background-position: top center !important; background-repeat: no-repeat !important; }
 
-/* Desktop grande mantém seu 220px original */
 @media (min-width: 1600px) {
   header { padding-left: 220px !important; padding-right: 220px !important; }
   #top { padding: 0 220px !important; }
@@ -227,7 +228,6 @@ html, body { max-width: 100%; overflow-x: clip; }
 }
 
 @media (max-width: 900px) {
-  /* AQUI COMEÇA O MOBILE - 3 TRAÇOS APARECE */
   .nav-desktop, .actions-desktop { display: none !important; }
   .menu-toggle { display: flex !important; }
   .nav-mobile { display: flex; }
@@ -265,14 +265,13 @@ html, body { max-width: 100%; overflow-x: clip; }
   #delivery .texto h2 { font-size: 34px !important; }
   #delivery .texto { max-width: 100% !important; }
 
-  /* FIX DO SEU PRINT - SOBRE SEM SOBREPOSIÇÃO */
   #sobre {
     flex-direction: column !important;
     gap: 24px !important;
     min-height: auto !important;
     padding: 40px 5% 40px !important;
     margin-left: 0 !important;
-    background-image: none !important; /* remove o bg que estava causando overflow */
+    background-image: none !important;
     background-color: #fff0f0;
     border-radius: 32px;
     width: 92%;
@@ -287,7 +286,6 @@ html, body { max-width: 100%; overflow-x: clip; }
     position: relative;
     z-index: 2;
   }
-  /* Esconde xícaras decorativas que estavam por cima do texto no mobile */
   #sobre::before, #sobre::after { display: none !important; }
 
   #localizacao {
